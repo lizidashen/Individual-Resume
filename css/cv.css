@@ -1,0 +1,751 @@
+/* section1的背景图动画效果 */
+@keyframes fadescale{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100%{
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes fadescale{
+    0%{
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+    50%{
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+    }
+    100%{
+        opacity: 0.5;
+        -webkit-transform: scale(1);
+    }
+}
+/* 图标字体 */
+@font-face {
+  font-family: 'iconfont';  /* project id 444208 */
+  src: url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.eot');
+  src: url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.svg#iconfont') format('svg');
+}
+/* 首页字体 */
+ @font-face {
+      font-family: 'quinzeyRegular';
+      src: url('../fonts/quinzey-webfont.eot');
+      src: url('../fonts/quinzey-webfont.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/quinzey-webfont.woff') format('woff'),
+	   url('../fonts/quinzey-webfont.ttf') format('truetype'),
+	   url('../fonts/quinzey-webfont.svg#quinzeyRegular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+   }
+   
+
+.content{
+	margin: 0 auto;
+    padding: 0;
+}
+
+.cv-container{
+    width:100%;
+    margin:0 auto;
+}
+/* 回到顶部字体样式 */
+/* 回到顶部样式*/
+#top{
+	display: none;
+	position: fixed;
+    width: 45px;
+    height: 45px;
+    background: #ccc;
+    border-radius: 5px;
+    right: 20px;
+    bottom: 10%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 45px;
+    z-index: 1000;
+    opacity: 0.6;
+}
+#top:hover{
+    opacity: 1;
+}
+#top .iconfont{
+    font-family:"iconfont";
+	font-size:2.5em;
+	font-style:normal;
+	color: #fff;
+}
+
+/* 各部分的背景样式------------------------------------------------------------------------------------------------- */
+
+#section1{
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #2c3e50;
+    overflow: hidden;
+}
+#section2,  #section6{
+    height: 80vh;
+}
+#section3, #section5{
+    height: 80vh;
+}
+#section5{
+    background: url("../image/skills-bg.jpg") no-repeat center;
+    background-attachment: fixed;
+}
+
+#sectionEnd{
+    height: 100vh;
+}
+.section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    padding-bottom: 20px; 
+}
+
+/* 各部分的淡入效果------------------------------------------------------------------------------------------------- */
+
+/* 元素从下方淡入 */
+.fades, .fade{
+    transform: translateY(2em);
+    -webkit-transform: translateY(2em);
+    opacity:0;
+}
+
+/* 元素从下方淡入的动画效果 */
+.section.active .fadesin1{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    opacity: 1;
+    transition: all 1s 0s;
+}
+.section.active .fadesin2{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    opacity: 1;
+    transition: all 1s 0.5s;
+}
+.section.active .fadesin3{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    opacity: 1;
+    transition: all 1s 1s;
+}
+.section.active .fadesin{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    opacity: 1;
+    transition: all 1s 0.2s;
+}
+
+
+/* section1------------------------------------------------------------------------------------------------- */
+/* section1的位置 */
+
+#section1 h1,h3{
+    font-family: 'quinzeyRegular','Lato', sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+    margin: 50px 0 30px;
+}
+
+#section1 .bg-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#section1 .bg-img li,.bg-img li.show{
+    webkit-animation: fadescale 5s forwards;
+    animation: fadescale 5s forwards;
+}
+
+#section1 .bg-img li{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+}
+/* section1背景图的引入 */
+.bg-img li{
+    background: url(../image/bg1.jpg) no-repeat center ;
+    background-size: cover;
+}
+.bg-img li:nth-child(2){
+    background: url(../image/bg2.jpg) no-repeat center ;
+    background-size: cover;
+}
+.bg-img li:nth-child(3){
+    background: url(../image/bg3.jpg) no-repeat center ;
+    background-size: cover;
+}
+.bg-img li:nth-child(4){
+    background: url(../image/bg4.jpg) no-repeat center ;
+    background-size: cover;
+}
+#section1 h3{
+    letter-spacing: 3px;
+    font-size: 30px;
+    margin: 40px 0;
+}
+.myIntro{
+    padding: 35vh 0 0 ;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.35s;
+    background: rgba(256,256,256,0.5);
+}
+#section1  h1{
+    margin-top:0;
+}
+#section1 span{
+    display: inline-block;
+    width:150px;
+    height:50px;
+    line-height: 48px;
+    font-size: 16px;
+    border:  1px solid ;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:  5px;
+    background: rgba(256,256,256,0.5);
+}
+#section1 span:hover, #section1 span.active{
+    background: #2a5781;
+    color: #fff;
+}
+
+/* section2------------------------------------------------------------------------------------------------- */
+
+/* 导航栏的样式 */ 
+#nav-bar{
+    width: 100%;
+    height: 70px;
+    background-color: #2a5781;
+    color: #F7F7F7;
+}
+#nav-bar.fixed{
+    position: fixed;
+    top:0;
+    z-index: 999;
+}
+/* 导航栏 - myblog */ 
+#nav-bar div.fl{
+	float: left;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 70px;
+    color: #F7F7F7;
+}
+/* 导航栏 - 菜单栏 */
+#nav-bar .fr{
+    float: right; 
+}
+.nav-ul li{
+    float: left;
+    line-height: 70px;
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+}
+.nav-ul li:hover, .nav-ul li.active{
+    color: #E87E04;
+}
+
+/* 移动端导航栏 - 菜单栏 */
+/* 移动端导航栏 - 菜单栏图标 */
+.more-nav{
+    display: none;
+    cursor: pointer;
+}
+.more-nav .iconfont{
+	font-family:"iconfont";
+	font-size:2.5em;
+	font-style:normal;
+	line-height: 70px;
+}
+/* 移动端导航栏 - 菜单栏内容 */
+.nav-xs-ul li{
+    color: #f5f5f5;
+}
+.nav-ul.nav-xs-ul{
+    position: absolute;
+    top: 70px;
+    left:0;
+    width:100%;
+    padding-bottom: 1em;
+    background: #2a5781;
+    display: none;
+}
+.nav-ul.nav-xs-ul li{
+	padding-top: 0.5em;
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    background: #2a5781;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+/* 移动端导航栏 - 菜单栏顶部白色边界 */
+.nav-ul.nav-xs-ul li:first-child{
+    border-top: 1px solid #C0C0C0;
+}
+
+/* 头像照片 */
+#section2 .fades img{
+    max-width: 200px;
+    width: 40%;
+    border-radius: 50%;
+}
+.center{
+	
+	text-align: center;
+}
+
+/* 自我介绍 -字体图片*/
+.my-intro .iconfont{
+    font-family:"iconfont";
+	font-size:1.5em;
+	font-style:normal;
+}
+/* 自我介绍 -文本内容*/
+.my-intro{
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 1em;
+    position: relative;
+}
+.my-intro .information{
+	width: 33%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 1em;
+}
+.my-intro p{
+    padding: 2em 0 0em;
+    text-indent: 2em;
+    text-align: left;
+}
+/* 自我介绍 -博客链接*/
+.my-intro a{
+	margin: 0 0.2em;
+    font-size:1.5em;
+    cursor: pointer;
+}
+.my-intro a:hover{
+    color:#2a5781 ;
+}
+
+
+
+
+
+/* section3------------------------------------------------------------------------------------------------- */
+
+/* section背景图 */
+#section3{
+    background: url("../image/services-bg.jpg") no-repeat center;
+    background-attachment: fixed;
+}
+
+/* 页面题目 skill */
+.section h2{
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    color: #2a5781;
+    padding: 150px 0 0;
+    letter-spacing: 2px;
+ }
+ /* 页面题目的下划线及动画 */
+.section hr{
+	position: relative;
+    background: #E87E04;
+    margin: 0 auto  80px;
+    height: 4px;
+    width: 0px;
+    text-align: center;   
+}
+.section.active hr{
+    width: 120px;
+}
+
+/* 每个技能组块的样式*/
+div.skill{
+    padding: 15px;
+}
+div.skill p{	
+    text-align: center;
+}
+ /* 每个技能组块的样式-字体图片样式*/
+.skill .iconfont{
+	font-family:"iconfont";
+	font-size:4em;
+	font-style:normal;
+	line-height: 70px;
+}
+/* 每个技能组块的样式-小题目字体样式*/
+.skill .ptitle{
+    color: #E87E04;
+    margin: 2em 0 1em;
+    font-size: 16px;
+    font-family: "SimHei";
+    text-align: center;
+}
+
+
+/* section4------------------------------------------------------------------------------------------------- */
+/* 每个技能组块的样式-小题目字体样式*/
+
+.zp-cover .iconfont{
+    font-family:"iconfont";
+	font-size:2.5em;
+	font-style:normal;
+	color: #E87E04;
+}
+
+#section4{
+    height: auto;
+    min-height: 100vh;
+}
+#section4.section hr{
+    margin-bottom: 30px;
+}
+#section4.section .intros{
+    margin-bottom: 60px;
+}
+#section4 .container>div{
+    padding: 10px;
+    transition: all 0.3s linear;
+}
+#section4 .container > div:hover{
+    transition: all 0.3s linear;
+    padding: 0;
+}
+#section4 .container > div .zp-cover{
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: 50%;
+    margin-top: -46px;
+    left: 0;
+}
+#section4 .container > div .zp-cover h4{
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#section4 .container > div .zp-cover p{
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0 1em;
+}
+#section4 .container > div .zp-cover img{
+    width: 25px;
+    height: 25px;
+}
+
+#section4 .container > div:hover .zp-cover{
+    display: block;
+    padding:  0 2em;
+}
+#section4 .container > div:hover .imgbox img{
+    -webkit-filter: brightness(0.3);
+    filter: brightness(0.3);
+}
+
+#section4 .container>div .imgbox{
+    width:100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+#section4 .container .imgbox img{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+
+/* section5------------------------------------------------------------------------------------------------- */
+
+#section5 .my-xp{
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+#section5 .my-xp:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: #eee;
+}
+#section5 .my-xp li{
+    position: relative;
+    overflow: hidden;
+}
+
+#section5 .date-box{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius:  50%;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -75px;
+}
+#section5 .my-work{
+    width: 40%;
+    text-align: right;
+}
+#section5 .my-xp strong{
+    color: #626e7c;
+    font-size: 16px;
+}
+#section5 .my-work p{
+    text-align: right;
+}
+#section5 .my-xp p.ptitle{
+    margin: 0.5em 0;
+}
+#section5 .date-box p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+}
+#section5 .my-school{
+    width: 40%;
+    float: right;
+}
+#section5 .my-school p, #section6 .my-school strong{
+    text-align: left;
+    display: block;
+}
+#section5 .my-xp li >div{
+    height: 150px;
+}
+#section5 .my-xp li:not(:first-child){
+    margin-top: 80px;
+}
+#section5 .my-xp li >div:last-child{
+    padding: 1em 0 0;
+}
+
+#uyan_frame{
+    width: 100%;
+}
+h4{
+    color: #fff;
+}
+
+/* sectionEnd------------------------------------------------------------------------------------------------- */
+#sectionEnd .endWord{
+	padding-top: 24%;
+	padding-bottom: 0;
+	height: 100%;
+	text-align: center;
+}
+
+#sectionEnd h1{
+    font-family: 'quinzeyRegular','Lato', sans-serif;
+    font-size: 80px;
+}
+
+/* 移动端适配------------------------------------------------------------------------------------------------- */
+/*
+    屏幕宽度小于1224px
+*/
+@media only screen and (max-width:1224px){
+
+    #section1 div.myIntro h1{
+        font-size: 50px;
+
+    }
+    #section1 div.myIntro h3{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .nav-ul.nav-xs-ul {
+        display: none;
+    }
+
+    #section5 .fades{
+        width: 50%;
+        margin: 0 auto;
+    }
+    #section5 .date-box{
+        left: 0;
+        margin-left: 0;
+    }
+    #section5 .my-xp:before{
+        left: 85px;
+        margin-left: 0;
+    }
+    #section5 .my-xp .my-xp-box{
+        float: left;
+        width: 55%;
+        margin-left: 160px;
+
+    }
+    #section5 .my-xp .my-xp-box p,  #section6 .my-xp .my-xp-box strong{
+        text-align: left;
+        display: block;
+    }
+}
+@media only screen and (max-width: 768px){
+    /*导航改变*/
+    .nav-ul{
+        display: none;
+    }
+    .more-nav{
+        display: block;
+    }
+    
+    #section2 .myIntro .information{
+    	width: 80%;
+    }
+    /*我的作品hover改变*/
+    #section4 .container > div .zp-cover{
+        display: block;
+    }
+    #section4 .container>div .imgbox img{
+        -webkit-filter: brightness(0.3);
+        filter: brightness(0.3);
+    }
+    #section5 .fades{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width:767px){
+
+
+    #section2,#section3,#section4,#section5,#sectionEnd{
+        height: auto;
+        min-height: 100vh;
+    }
+
+
+}
+
+@media only screen and (max-width:415px){
+	
+
+	/*section1的字体大小及文本框的大小*/
+    #section1 div.myIntro h1{
+        font-size: 28px;
+    }
+    #section1 div.myIntro h3{
+        font-size: 16px;
+    }
+    #section1 div.myIntro h1{
+        font-size: 28px;
+    }
+    
+  
+    /*section2的自我介绍部分的字体大小及文本框的大小*/
+    #section2 .my-intro .information{
+		width: 70%;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+    .section h2{
+        padding-top: 90px;
+
+    }
+    .section hr{
+        margin-bottom: 20px;
+    }
+    .ptitle{
+        margin: 1em 0 0.5em;
+    }
+    /*section4的作品集的字体大小及文本框的大小*/
+    #section4.section .intros{
+        margin-bottom: 20px;
+    }
+    #section4 .container > div .zp-cover p{
+        font-size: 12px;
+    }
+    #section4 .container > div .zp-cover img{
+        display: none;
+    }
+    
+    /*section5的作品集的字体大小及文本框的大小*/
+    #section5 .container.center{
+        margin-top: 40px;
+    }
+    #section5 .fades{
+        width: 100%;
+        margin: 0 auto;
+    }
+    #section5 .date-box{
+        width: 100px;
+        height: 100px!important;
+    }
+    #section5 .date-box p{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    #section5 .my-xp:before{
+        left: 65px;
+    }
+    #section5 .my-xp .my-xp-box{
+        margin-left: 60px;
+        margin-top: 110px;
+        width: 75%;
+    }
+    #section5 .my-xp li:not(:first-child){
+        margin-top: 20px;
+    }
+    /*sectionEnd的字体大小*/
+    #sectionEnd .endWord{
+		padding-top: 50%;
+	}
+	
+	#sectionEnd h1{
+	    font-size: 40px;
+	}
+
+
+
+}
