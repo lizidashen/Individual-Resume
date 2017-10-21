@@ -11,7 +11,7 @@ span,a{
     margin: 0;
 }
 body{
-    font-family:"Microsoft Yahei","Apple LiGothic Medium";
+    font-family:"Microsoft Yahei",Arial,Helvetica,sans-serif,"宋体";
     color: #787978;
 }
 html,body{
