@@ -31,12 +31,12 @@
 }
 /* 图标字体 */
 @font-face {
-  font-family: 'iconfont';  /* project id 444208 */
-  src: url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.eot');
-  src: url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_444208_pocx3vljushmpldi.svg#iconfont') format('svg');
+  font-family: 'iconfont';  
+  src: url('..//fonts/iconfont.eot');
+  src: url('..//fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('..//fonts/iconfont.woff') format('woff'),
+  url('..//fonts/iconfont.ttf') format('truetype'),
+  url('..//fonts/iconfont.svg#iconfont') format('svg');
 }
 /* 首页字体 */
  @font-face {
