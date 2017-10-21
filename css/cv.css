@@ -536,7 +536,8 @@ div.skill p{
     width: 40%;
     text-align: right;
 }
-#section5 .my-xp strong{
+#section5 .my-xp 
+{
     color: #626e7c;
     font-size: 16px;
 }
@@ -556,7 +557,7 @@ div.skill p{
     width: 40%;
     float: right;
 }
-#section5 .my-school p, #section6 .my-school strong{
+#section5 .my-school p, #section5 .my-school strong{
     text-align: left;
     display: block;
 }
