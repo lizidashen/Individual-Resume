@@ -417,19 +417,21 @@ div.skill p{
     color: #E87E04;
     margin: 2em 0 1em;
     font-size: 16px;
-    font-family: "SimHei";
+    font-family: "SimHei","Helvetica";
     text-align: center;
 }
 
 
 /* section4------------------------------------------------------------------------------------------------- */
-/* 每个技能组块的样式-小题目字体样式*/
 
-.zp-cover .iconfont{
+.zp-cover .iconfont,.ife-cover .iconfont{
     font-family:"iconfont";
 	font-size:2.5em;
 	font-style:normal;
 	color: #E87E04;
+}
+.ife-cover .iconfont{
+	font-size:1.5em;
 }
 
 #section4{
@@ -442,11 +444,14 @@ div.skill p{
 #section4.section .intros{
     margin-bottom: 60px;
 }
-#section4 .container>div{
+
+
+/*图片放大效果*/
+#section4 .container .pad-big{
     padding: 10px;
     transition: all 0.3s linear;
 }
-#section4 .container > div:hover{
+#section4 .container .pad-big:hover{
     transition: all 0.3s linear;
     padding: 0;
 }
@@ -475,7 +480,6 @@ div.skill p{
     width: 25px;
     height: 25px;
 }
-
 #section4 .container > div:hover .zp-cover{
     display: block;
     padding:  0 2em;
@@ -495,6 +499,34 @@ div.skill p{
 #section4 .container .imgbox img{
     width: 100%;
     transition: all 0.3s ease;
+}
+
+/*ife部分*/
+#section4 .title{
+	margin-top: 20px;
+	display: block;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;    
+}
+#section4 .title > div:hover{
+    transition: all 0.3s linear;
+    padding: 10;
+}
+#section4 .container > div .ife-cover{
+	margin-top: 10px;
+    display: block;
+    width: 100%;
+    top: 50%;
+    border-radius: 5px;
+    background: #2c3e50;
+    border: 1px solid #f7f7f7;
+}
+#section4 .container span{
+    font-size: 1.5em;
+    line-height: 2em;
+    color: #fff; 
+    margin-right: 1em; 
 }
 
 
@@ -627,7 +659,7 @@ h4{
         margin-left: 160px;
 
     }
-    #section5 .my-xp .my-xp-box p,  #section6 .my-xp .my-xp-box strong{
+    #section5 .my-xp .my-xp-box p,  #section5 .my-xp .my-xp-box strong{
         text-align: left;
         display: block;
     }
@@ -735,6 +767,10 @@ h4{
         margin-top: 110px;
         width: 75%;
     }
+    #section5 .my-xp .my-xp-box p{
+        font-size: 14px;
+    }
+    
     #section5 .my-xp li:not(:first-child){
         margin-top: 20px;
     }
