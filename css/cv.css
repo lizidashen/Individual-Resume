@@ -94,7 +94,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: #2c3e50;
+    color: #2a5781;
     overflow: hidden;
 }
 #section2,  #section6{
@@ -432,6 +432,7 @@ div.skill p{
 }
 .ife-cover .iconfont{
 	font-size:1.5em;
+	line-height: 2em;
 }
 
 #section4{
@@ -509,24 +510,34 @@ div.skill p{
     font-size: 16px;
     border-bottom: 1px solid #ccc;    
 }
-#section4 .title > div:hover{
-    transition: all 0.3s linear;
-    padding: 10;
+
+#section4 .container .effect{
+	padding: 10px;
 }
+
 #section4 .container > div .ife-cover{
-	margin-top: 10px;
+	margin-top: 20px;
     display: block;
     width: 100%;
     top: 50%;
     border-radius: 5px;
-    background: #2c3e50;
-    border: 1px solid #f7f7f7;
+    background: #F5F5F5;
+    border: 1px solid #2a5781;
 }
 #section4 .container span{
     font-size: 1.5em;
     line-height: 2em;
-    color: #fff; 
+    color: #2a5781; 
     margin-right: 1em; 
+}
+#section4 .container .effect:hover .ife-cover{
+    background: #2a5781;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+#section4 .container .effect:hover span,#section4 .container .effect:hover .iconfont{
+    color: #fff; 
+    transition: all 0.3s ease;
 }
 
 
